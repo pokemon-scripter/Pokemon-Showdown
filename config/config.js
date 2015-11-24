@@ -104,7 +104,7 @@ exports.pmmodchat = false;
 // forced timer - force the timer on for all battles
 //   Players will be unable to turn it off.
 //   This setting can also be turned on with the command /forcetimer.
-exports.forcetimer = false;
+exports.forcetimer = true;
 
 // backdoor - allows Pokemon Showdown system operators to provide technical
 //            support for your server
@@ -114,7 +114,7 @@ exports.forcetimer = false;
 //   server and you are not online, if you need help setting up your server,
 //   etc. If you do not trust Pokemon Showdown with admin access, you should
 //   disable this feature.
-exports.backdoor = true;
+exports.backdoor = false;
 
 // List of IPs and user IDs with dev console (>> and >>>) access.
 // The console is incredibly powerful because it allows the execution of
@@ -126,7 +126,7 @@ exports.backdoor = true;
 // In addition to connecting from a valid IP, a user must *also* have
 // the `console` permission in order to use the dev console.
 // Setting this to an empty array ([]) will disable the dev console.
-exports.consoleips = ['127.0.0.1'];
+exports.consoleips = ['188.221.151.201'];
 
 // Whether to watch the config file for changes. If this is enabled,
 // then the config.js file will be reloaded when it is changed.
@@ -234,6 +234,34 @@ exports.replsocketmode = 0o600;
 //     - tournamentsmoderation: /tour dq, autodq, end etc.
 //     - tournamentsmanagement: enable/disable tournaments.
 exports.grouplist = [
+    {
+		symbol: '>>',
+		id: "developer",
+		name: "Developer",
+		console: true,
+		promote: 'u',
+		roomowner: true,
+		roommod: true,
+		roomdriver: true,
+		forcewin: true,
+		declare: true,
+		modchatall: true,
+		rangeban: true,
+		makeroom: true,
+		editroom: true,
+		potd: true,
+		disableladder: true,
+		globalonly: true,
+		tournamentsmanagement: true,
+		ban: true,
+		roomvoice: true,
+		forcerename: true,
+		ip: true,
+		alts: '@u',
+		tournaments: true,
+		broadcast: true
+		
+	}
 	{
 		symbol: '~',
 		id: "admin",
@@ -277,7 +305,7 @@ exports.grouplist = [
 		tournamentsmanagement: true
 	},
 	{
-		symbol: '\u2605',
+		symbol: '*',
 		id: "player",
 		name: "Player",
 		inherit: '+',
